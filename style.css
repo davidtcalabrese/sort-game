@@ -37,8 +37,13 @@ body * {
 
 .instructions {
     width: 80%;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
+h2 {
+    font-size: 1.1rem;
+    text-align: center;
+}
 .draggable-list {
     border: 1px solid var(--border-color);
     color: var(--text-color);
@@ -111,4 +116,21 @@ body * {
 
 .check-btn:focus {
     outline: none;
+}
+
+.credits {
+    margin-bottom: 2em;
+}
+address {
+    display: inline;
+}
+
+address a {
+    text-decoration: none;
+    color: rgb(255, 252, 68);
+    margin-bottom: 2em;
+}
+
+address a:hover {
+    color: rgb(253, 0, 232);
 }
