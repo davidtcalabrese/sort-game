@@ -1,17 +1,17 @@
 const draggable_list = document.getElementById('draggable-list');
 const check = document.getElementById('check');
 
-const richestPeople = [
-  'Jeff Bezos',
-  'Bill Gates',
-  'Warren Buffett',
-  'Bernard Arnault',
-  'Carlos Slim Helu',
-  'Amancio Ortega',
-  'Larry Ellison',
-  'Mark Zuckerberg',
-  'Michael Bloomberg',
-  'Larry Page',
+const largestCities = [
+  'New York',
+  'Los Angeles',
+  'Chicago',
+  'Houston',
+  'Phoenix',
+  'Philadelphia',
+  'San Antonio',
+  'San Diego',
+  'Dallas',
+  'San Jose',
 ];
 
 // store list items
@@ -23,11 +23,11 @@ createList();
 
 // insert list items into DOM
 function createList() {
-  [...richestPeople]
-    .map(person => ({ value: person, sort: Math.random() }))
+  [...largestCities]
+    .map(city => ({ value: city, sort: Math.random() }))
     .sort((a, b) => a.sort - b.sort)
-    .map(person => person.value)
-    .forEach((person, index) => {
+    .map(city => city.value)
+    .forEach((city, index) => {
       const listItem = document.createElement('li');
 
       listItem.setAttribute('data-index', index);
@@ -35,7 +35,7 @@ function createList() {
       listItem.innerHTML = `
             <span class="number">${index + 1}</span>
             <div class="draggable" draggable="true">
-                <p class="person-name">${person}</p>
+                <p class="person-name">${city}</p>
                 <i class="fas fa-grip-lines"></i>
             </div>
         `;
@@ -83,7 +83,7 @@ function checkOrder() {
   listItems.forEach((listItem, index) => {
     const personName = listItem.querySelector('.draggable').innerText.trim();
 
-    if (personName !== richestPeople[index]) {
+    if (personName !== largestCities[index]) {
       listItem.classList.add('wrong');
     } else {
       listItem.classList.remove('wrong');

@@ -9,7 +9,8 @@
 * { box-sizing: border-box; }
 
 body {
-    background-color: #fff;
+    background-image: url(./img/city-night.jpg);
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,6 +18,25 @@ body {
     height: 100vh;
     margin: 0;
     font-family: "Lato", sans-serif;
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+body * {
+    z-index: 1;
+  }
+
+.instructions {
+    width: 80%;
 }
 
 .draggable-list {
@@ -71,6 +91,9 @@ body {
     flex: 1;
 }
 
+.btn-container {
+    margin-bottom: 2em;
+}
 .check-btn {
     background-color: var(--background-color);
     border: none;
@@ -78,6 +101,8 @@ body {
     font-size: 16px;
     padding: 10px 20px;
     cursor: pointer;
+    margin-bottom: 2em;
+    display: block;
 }
 
 .check-btn active {
