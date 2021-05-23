@@ -29,6 +29,10 @@ body {
   color: #fff;
   padding-bottom: 180px;
 }
+
+h1 {
+    font-size: 3.25rem;
+}
 .instructions {
   width: 80%;
   background-color: rgba(0, 0, 0, 0.6);
@@ -160,8 +164,12 @@ address a {
   color: #f7f6f6;
 }
 .social i {
-  color: rgb(255, 140, 9);
+  color: rgb(24, 2, 218);
   margin: 0 10px;
+}
+
+.social i:hover {
+    color: #f1ee29;
 }
 
 /*------------------------------- media queries --------------------------------
