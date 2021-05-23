@@ -4,6 +4,9 @@
   --border-color: #e3e5e4;
   --background-color: #c3c7ca;
   --text-color: #34444f;
+  --logo-green: #07e41a;
+  --logo-yellow: #fefe00;
+  --logo-blue: #0000e4;
 }
 
 * {
@@ -31,7 +34,7 @@ body {
 }
 
 h1 {
-    font-size: 3.25rem;
+  font-size: 3.25rem;
 }
 .instructions {
   width: 80%;
@@ -42,6 +45,7 @@ h2 {
   font-size: 1.1rem;
   text-align: center;
 }
+
 .draggable-list {
   border: 1px solid var(--border-color);
   color: var(--text-color);
@@ -73,15 +77,15 @@ h2 {
   background-color: #eaeaea;
 }
 
-.draggable-list .person-name {
+.draggable-list .city-name {
   margin: 0 20px 0 0;
 }
 
-.draggable-list li.right .person-name {
-  color: #3ae374;
+.draggable-list li.right .city-name {
+  color: var(--logo-green);
 }
 
-.draggable-list li.wrong .person-name {
+.draggable-list li.wrong .city-name {
   color: #ff3838;
 }
 
@@ -115,7 +119,6 @@ h2 {
 .check-btn:focus {
   outline: none;
 }
-
 /*------------------------------- footer styles --------------------------------
 ------------------------------------------------------------------------------*/
 footer {
@@ -128,7 +131,7 @@ footer {
   height: 150px;
   position: relative;
   margin: 0;
-  border-top: 2px solid #f1ee29;
+  border-top: 2px solid var(--logo-yellow);
 }
 footer .credits {
   width: 100%;
@@ -146,7 +149,6 @@ footer img {
   align-items: center;
   justify-content: center;
   margin-bottom: 1em;
-
 }
 address {
   display: inline;
@@ -154,14 +156,15 @@ address {
 
 address a {
   text-decoration: none;
-  color: rgb(28, 238, 0);
+  color: var(--logo-green);
   margin-bottom: 2em;
   font-size: 1.5rem;
 }
 
 address a:hover {
-  color: #f1ee29;
-
+  color: var(--logo-yellow);
+  background-color: #000;
+  border-radius: 5px;
 }
 
 .social {
@@ -174,14 +177,13 @@ address a:hover {
   color: #f7f6f6;
 }
 .social i {
-  color: rgb(24, 2, 218);
+  color: var(--logo-blue);
   margin: 0 10px;
 }
 
 .social i:hover {
-    color: #f1ee29;
+  color: var(--logo-yellow);
 }
-
 /*------------------------------- media queries --------------------------------
 ------------------------------------------------------------------------------*/
 @media screen and (max-width: 1100px) {
@@ -189,7 +191,6 @@ address a:hover {
     margin: 0;
     bottom: 0;
     height: 190px;
-
   }
   .social {
     position: static;
