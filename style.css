@@ -128,6 +128,7 @@ footer {
   height: 150px;
   position: relative;
   margin: 0;
+  border-top: 2px solid rgb(255, 140, 9);
 }
 footer .credits {
   width: 100%;
