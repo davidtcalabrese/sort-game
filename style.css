@@ -167,6 +167,10 @@ address a:hover {
   border-radius: 5px;
 }
 
+address a:active {
+  color: var(--logo-green);
+}
+
 .social {
   position: absolute;
   bottom: 45px;
@@ -183,6 +187,10 @@ address a:hover {
 
 .social i:hover {
   color: var(--logo-yellow);
+}
+
+.social i:active {
+  color: var(--logo-green);
 }
 /*------------------------------- media queries --------------------------------
 ------------------------------------------------------------------------------*/
