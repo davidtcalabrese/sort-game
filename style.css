@@ -186,11 +186,11 @@ address a:active {
 }
 
 .social i:hover {
-  color: var(--logo-yellow);
+  color: var(--logo-green);
 }
 
 .social i:active {
-  color: var(--logo-green);
+  color: var(--logo-yellow);
 }
 /*------------------------------- media queries --------------------------------
 ------------------------------------------------------------------------------*/
