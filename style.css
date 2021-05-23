@@ -128,22 +128,25 @@ footer {
   height: 150px;
   position: relative;
   margin: 0;
-  border-top: 2px solid rgb(255, 140, 9);
+  border-top: 2px solid #f1ee29;
 }
 footer .credits {
   width: 100%;
   color: #000;
   text-align: center;
   margin: 1.2em 0 0.5em 0;
+  font-size: 1.5rem;
 }
 footer img {
   width: 60px;
+  margin-left: 15px;
 }
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1em;
+
 }
 address {
   display: inline;
@@ -151,8 +154,14 @@ address {
 
 address a {
   text-decoration: none;
-  color: rgb(255, 140, 9);
+  color: rgb(28, 238, 0);
   margin-bottom: 2em;
+  font-size: 1.5rem;
+}
+
+address a:hover {
+  color: #f1ee29;
+
 }
 
 .social {
