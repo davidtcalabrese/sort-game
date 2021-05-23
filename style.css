@@ -21,7 +21,6 @@ body {
     font-size: 1.25rem;
     color: #fff;
 }
-
 .instructions {
     width: 80%;
     background-color: rgba(0, 0, 0, 0.6);
@@ -105,8 +104,30 @@ h2 {
     outline: none;
 }
 
-.credits {
-    margin-bottom: 2em;
+
+/*------------------------------- footer styles --------------------------------
+------------------------------------------------------------------------------*/
+footer {
+    background: #f7f6f6;
+    width: 100%;  
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    height: 150px;
+}
+footer .credits {
+    width: 100%;
+    color: #000;
+    text-align: center;
+    margin: 1em 0 .5em 0;
+}
+footer img {width: 60px; }
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1em;
 }
 address {
     display: inline;
@@ -114,10 +135,10 @@ address {
 
 address a {
     text-decoration: none;
-    color: rgb(255, 252, 68);
+    color: rgb(255, 140, 9);
     margin-bottom: 2em;
 }
 
 address a:hover {
-    color: rgb(253, 0, 232);
+    color: rgb(58, 1, 192);
 }
