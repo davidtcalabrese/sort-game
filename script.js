@@ -1,4 +1,6 @@
+// unordered list of cities
 const draggable_list = document.getElementById('draggable-list');
+// check button
 const check = document.getElementById('check');
 
 const largestCities = [
