@@ -3,18 +3,42 @@ const draggable_list = document.getElementById('draggable-list');
 // check button
 const check = document.getElementById('check');
 
+const newYork = {"name": "New York", "population": "8,623,000"};
+const losAngeles = {"name": "Los Angeles", "population": "3,976,000"};
+const chicago = {"name": "Chicago", "population": "2,726,000"};
+const houston = {"name": "Houston", "population": "2,296,000"};
+const phoenix = {"name": "Phoenix", "population": "1,566,000"};
+const philadelphia = {"name": "Philadelphia", "population": "1,586,000"};
+const sanAntonio = {"name": "San Antonio", "population": "1,466,000"};
+const sanDiego = {"name": "San Diego", "population": "1,416,000"};
+const dallas = {"name": "Dallas", "population": "1,325,000"};
+const sanJose = {"name": "San Jose", "population": "1,036,000"};
+
 const largestCities = [
-  'New York',
-  'Los Angeles',
-  'Chicago',
-  'Houston',
-  'Phoenix',
-  'Philadelphia',
-  'San Antonio',
-  'San Diego',
-  'Dallas',
-  'San Jose',
+  newYork,
+  losAngeles,
+  chicago,
+  houston,
+  phoenix,
+  philadelphia,
+  sanAntonio,
+  sanDiego,
+  dallas,
+  sanJose,
 ];
+
+// const largestCities = [
+//   'New York',
+//   'Los Angeles',
+//   'Chicago',
+//   'Houston',
+//   'Phoenix',
+//   'Philadelphia',
+//   'San Antonio',
+//   'San Diego',
+//   'Dallas',
+//   'San Jose',
+// ];
 
 // store list items
 const listItems = [];
@@ -37,7 +61,8 @@ function createList() {
       listItem.innerHTML = `
             <span class="number">${index + 1}</span>
             <div class="draggable" draggable="true">
-                <p class="city-name">${city}</p>
+                <p class="city-name">${city.name}</p>
+                <span class="hidden population">(${city.population})</span>
                 <i class="fas fa-grip-lines"></i>
             </div>
         `;
@@ -52,7 +77,6 @@ function createList() {
 
 function dragStart() {
   dragStartIndex = this.closest('li').getAttribute('data-index');
-  console.log(dragStartIndex);
 }
 
 function dragEnter() {
@@ -83,13 +107,16 @@ function swapItems(fromIndex, toIndex) {
 
 function checkOrder() {
   listItems.forEach((listItem, index) => {
-    const personName = listItem.querySelector('.draggable').innerText.trim();
-
-    if (personName !== largestCities[index]) {
+    const cityName = listItem.querySelector('.draggable').innerText.trim();
+    const population = listItem.querySelector('.population');
+    
+    if (cityName !== largestCities[index].name) {
       listItem.classList.add('wrong');
     } else {
       listItem.classList.remove('wrong');
       listItem.classList.add('right');
+      population.classList.remove('hidden');
+      listItem.classList.add('show');
     }
   })
 }
